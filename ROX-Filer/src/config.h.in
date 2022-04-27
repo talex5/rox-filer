@@ -25,6 +25,7 @@
 #undef HAVE_MBRTOWC
 #undef HAVE_WCTYPE_H
 
+#undef HAVE_MMAP
 #undef LARGE_FILE_SUPPORT
 
 #undef HAVE_REGEX_H

@@ -12,7 +12,7 @@ LIBS = @LIBS@ @LFS_LDFLAGS@
 
 PKG_CONFIG_FLAGS=
 
-CFLAGS = -I. -I${srcdir} ${PROF} @CFLAGS@ @LFS_CFLAGS@ \
+CFLAGS = -I. -I${srcdir} ${PROF} @CFLAGS@ @LFS_CFLAGS@ -DHAVE_CONFIG_H \
 	 `${PKG_CONFIG} ${PKG_CONFIG_FLAGS} --cflags gtk+-2.0 libxml-2.0 sm ice`
 LDFLAGS = ${PROF} @LDFLAGS@ `${PKG_CONFIG} ${PKG_CONFIG_FLAGS} --libs gtk+-2.0 libxml-2.0 sm ice| sed 's/-lpangoxft-[^ ]*//'` ${LIBS}
 
